@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Style -->
+     <link rel="stylesheet" href="../dist/tailwind.css">
+
+     <!-- Alpin JS -->
+     <script src="//unpkg.com/alpinejs"></script>
+
+     <!-- link Footer -->
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Link to FontAwesome for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!-- data aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+</head>
+<body class="bg-gradient-to-r from-orange-200 via-pink-300 to-purple-200 !important">
+    <!-- Nav -->
+    <nav class="py-9 px-4 " x-data="{navOpen : true}">
+        <div class="container  mx-auto ">
+            <div class="flex items-center justify-between ">
+                 <img src="/img/Frame 1.png" alt="logo" class="order-1 sm:order-2">
+                <img @click="navOpen = ! navOpen" src="/img/Vector.svg" alt="logohamburger" class="lg:hidden order-2 sm:order-1">
+                <div class="order-2 hidden lg:block">
+                    <ul class="flex gap-16">
+                        <li class="text-grey font-bold text-sm font-RALEWAY hover:text-purple-800 hover:underline"><a href="">Home</a></li>
+                        <li class="text-grey font-bold text-sm font-RALEWAY opacity-50 hover:text-purple-800 hover:underline"><a href="#aboutMe">About Me</a></li>
+                        <li class="text-grey font-bold text-sm font-RALEWAY opacity-50 hover:text-purple-800 hover:underline"><a href="skill">Skill</a></li>
+                        <li class="text-grey font-bold text-sm font-RALEWAY opacity-50 hover:text-purple-800 hover:underline"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="order-3 hidden lg:block">
+                <button class="grow  px-8 py-4 font-bold text-5xl text-gray-800 rounded-full hover:text-purple-500" text-sm   ><ion-icon name="paper-plane-outline"></ion-icon><button>
+                </div>
+            </div>
+        </div>
+        <div x-show="navOpen " x-data="{open : false}" class="z-50 fixed bottom-0 right-0 left-0 bg-white p-4 border lg:hidden"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90">
+            <ul class="flex justify-between bg-transparent">
+                <li>
+                    <button class="flex justify-center flex-col items-center gap-1  text-ungu hover:text-red-400 ">
+                        <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+                        <span class="text-base font-bold">Home</span>
+                    </button>
+                </li>
+                <li>
+                    <button @click="open = !open" class="flex justify-center flex-col items-center gap-1 hover:text-red-400">
+                        <ion-icon name="home-outline" class="text-2xl opacity-50"></ion-icon>
+                        <span class="opacity-50 text-base font-bold">More</span>
+                    </button>
+                </li>
+            </ul>
+            <div x-show="open" 
+                class="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-4 w-3/4 "
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90">
+                
+                <button class="grow bg-gradient-to-r from-orange-200 via-pink-300 to-purple-200 !important px-8 py-4 font-bold text-white rounded-full" text-sm>Welcome!</button>
+            </div>
+        </div>
+        
+    </nav>
+
+<!-- Hero Section -->
+<section>
+    <div class="container mx-auto px-4 py-28">
+        <div class="grid grid-cols-12">
+            <div class="col-span-12 lg:col-span-4 order-2 lg:w-full ">
+                <div>
+                    <h1 class="md:mb-[55px] lg:text-[69px] md:text-[52px] mt-4 mb-2 font-bold text-[40px] text-gray-300 leading-tight text-center"><span class="text-5xl  font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.100),theme(colors.pink.300),theme(colors.orange.400),theme(colors.pink.300),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] animate-gradient ">I'm a Programmer</span></h1>
+                    <p class="md:text-[18px] text-center font-semibold opacity-50 mb-6 text-base lg:w-full mx-auto">Web Developer</p>
+                    <div class="justify-center items-center md:flex-row  flex gap-10 order-4 text-[30px] " >
+                        <button class=" flex gap-5 order-3 text-[30px] ">
+                            <a href="https://www.instagram.com/unna.raa?igsh=MWN0ZTRwMXhvd2FwNg%3D%3D&utm_source=qr" class="hover:text-fuchsia-700"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="https://www.linkedin.com/in/asmaul-husna-rahmat-husna-b22587316/" class="hover:text-blue-400"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            <a href="https://medium.com/@iphoneunna" class="hover:text-fuchsia-700"><ion-icon name="logo-medium"></ion-icon>                    </ion-icon></a>
+                            <a href="https://youtube.com/@ahusrah?si=cj7Be4MK14S3XRes" class="hover:text-red-800"><ion-icon name="logo-youtube"></ion-icon></a>  
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="justify-center items-center mx-auto col-span-12 lg:col-span-8 order-1 ">
+                
+                <img src="/img/Group 1 (1).png" alt="" class="w-full">
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<!-- About Me -->
+
+        <div class="container px-5 py-24 mx-auto flex flex-wrap ">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h2 class="sm:text-3xl text-[40px] font-bold font-Bebas text-white underline decoration-orange-400 decoration-4 underline-offset-8 tracking-[10px] uppercase">Skill</h2>
+            </div>
+            <div class="md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-14 md:mb-0 items-center text-center">
+                <h2 class="font-Josefin sm:text-[30px] text-xl mb-5 font-bold text-white">Web Developer</h2>
+                <p class="mb-8 leading-relaxed text-slate-900 text-justify">Hello! I'm a passionate web developer with experience in building high-quality websites and applications. I specialize in front-end technologies like HTML, CSS, and JavaScript, and I love creating intuitive and dynamic user experiences.
+                    In addition to front-end development, I also have experience working with back-end technologies and databases, enabling me to build full-stack web applications.</p>
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 ms:items-start items-center text-center">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Technology Stack</h2>
+                    <div class="flex justify-center space-x-10">
+                      <!-- HTML Icon -->
+                      <div class="flex flex-col items-center">
+                        <i class="fab fa-html5 text-6xl text-red-500"></i>
+                        <p class="mt-4 text-lg text-gray-700">HTML5</p>
+                      </div>
+                
+                      <!-- CSS Icon -->
+                      <div class="flex flex-col items-center">
+                        <i class="fab fa-css3-alt text-6xl text-blue-500"></i>
+                        <p class="mt-4 text-lg text-gray-700">CSS3</p>
+                      </div>
+                
+                      <!-- JavaScript Icon -->
+                      <div class="flex flex-col items-center">
+                        <i class="fab fa-js-square text-6xl text-yellow-500"></i>
+                        <p class="mt-4 text-lg text-gray-700">JavaScript</p>
+                      </div>
+                
+                      <!-- Tailwind CSS Icon -->
+                      <!-- <div class="flex flex-col items-center m-4">
+                        <img src="path/to/tailwindcss-logo.png" alt="Tailwind CSS Logo" class="w-16 h-16 mb-2">
+                        <p>Tailwind CSS</p>
+                    </div>  -->
+                
+                      <!-- Database Icon -->
+                      <div class="flex flex-col items-center">
+                        <i class="fas fa-database text-6xl text-indigo-500"></i>
+                        <p class="mt-4 text-lg text-gray-700">Database</p>
+                      </div>
+                
+                      <!-- MySQL Icon -->
+                      <div class="flex flex-col items-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-20 h-20">
+                        <p class="mt-4 text-lg text-gray-700">MySQL</p>
+                      </div>
+                    </div>
+            </div>
+        </div>
+
+    <!-- Skill -->
+ 
+<!-- Portfolio Section -->
+<section class="container mx-auto px-6 py-12">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">My Projects</h2>
+
+    <!-- Project Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+        <!-- Project 1 -->
+        <div class="bg-opacity-10 shadow-lg rounded-lg overflow-hidden data:aos">
+            <img src="/img/WhatsApp Image 2024-09-20 at 07.54.02_10e7dd3d.jpg" alt="Project 1" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Form Login Project</h3>
+                <p class="text-gray-600 mt-2">In this project, I am trying to create a simple login form for a web application. The goal is to learn how to use external CSS for styling and understand how to link CSS files with HTML.</p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-opacity-10 shadow-lg rounded-lg overflow-hidden">
+            <img src="/img/Screenshot 2024-09-20 074956.png" alt="Project 2" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Portopolio Project</h3>
+                <p class="text-gray-600 mt-2">This project not only improved my skills in using Tailwind CSS but also gave me a better understanding of how to design attractive and functional interfaces.</p>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-opacity-10 shadow-lg rounded-lg overflow-hidden">
+            <img src="/img/spotify.jpg" alt="Project 3" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">Spotify Project</h3>
+                <p class="text-gray-600 mt-2">With Tailwind CSS, I can easily add classes for styling. I use utility classes to set margins, padding, color and font size. For example, to make the playlist more interesting, I added hover effects and transitions.</p>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="bg-opacity-10 shadow-lg rounded-lg overflow-hidden">
+            <img src="/img/database.jpg" alt="Project 4" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 hover:text-slate-800">Practical Exam Project</h3>
+                <p class="text-gray-600 mt-2">I started by planning the database structure. I identify what is needed, such as here there is an ID, and others. I use a primary key for each table so that each record can be uniquely identified.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact -->
+
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="w-full max-w-xl px-6 py-8 bg-transparent shadow-lg rounded-lg  items-center justify-center">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Contact Me</h2>
+
+              <!-- Flex Container for Name and Email -->
+              <div class="flex space-x-4">
+                
+                <!-- Name Input -->
+                <div class="flex-1">
+                  <label for="name" class="text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your Name" 
+                         class="mt-1 block w-full px-4 py-2 border bg-transparent rounded-md shadow focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out ">
+                </div>       
+                <!-- Email Input -->
+                <div class="flex-1">
+                  <label for="email" class="text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" 
+                         class="mt-1 block w-full px-4 py-2 border bg-transparent rounded-md shadow focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out">
+                </div>
+              </div>      
+              <!-- Message Textarea (Full Width) -->
+              <div class="flex">
+                <div class="flex-1">
+                  <label for="message" class="text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Your Message..." 
+                            class="mt-1 block w-full px-4 py-2 border bg-transparent rounded-md shadow focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 ease-in-out"></textarea>
+                </div>
+              </div>
+              <!-- Submit Button -->
+              <div>
+                <button type="submit" 
+                        class="w-full bg-indigo-500 text-white py-2 px-4 rounded-md shadow hover:bg-indigo-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </section>
+
+        <!-- Copyright -->
+        <p class="mt-6 lg:mt-0 text-gray-400 text-sm">
+            © 2024 My Website. All rights reserved.</p>
+        </div>
+    </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
